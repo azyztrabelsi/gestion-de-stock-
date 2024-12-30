@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onMouseClicked="#getData" prefHeight="445.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestion.ArticleController">
+   <children>
+      <VBox layoutX="38.0" layoutY="87.0" prefHeight="293.0" prefWidth="262.0" spacing="15.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CodeArticle">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <TextField fx:id="textFieldCodeArticle" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Libelle">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <TextField fx:id="textFieldLibelle" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Qte">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <TextField fx:id="textFieldQte" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PrixHT">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <TextField fx:id="textFieldPrixHT" />
+         </children>
+      </VBox>
+      <TableView fx:id="tableview" layoutX="333.0" layoutY="116.0" onMouseClicked="#getData" prefHeight="242.0" prefWidth="375.0" xmlns:fx="http://javafx.com/fxml/1">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="59.0" text="ID " />
+            <TableColumn fx:id="colcode" prefWidth="103.0" text="Code Article" />
+            <TableColumn fx:id="collibelle" prefWidth="73.0" text="Libelle" />
+            <TableColumn fx:id="colqte" prefWidth="65.0" text="Qte" />
+            <TableColumn fx:id="colprixht" prefWidth="75.0" text="PrixHT" />
+        </columns>
+      </TableView>
+      <Text layoutX="254.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Article" textOrigin="CENTER" wrappingWidth="175.412109375">
+         <font>
+            <Font size="38.0" />
+         </font></Text>
+      <ButtonBar layoutX="20.0" layoutY="380.0" prefHeight="40.0" prefWidth="468.0">
+        <buttons>
+          <Button fx:id="btnSave" mnemonicParsing="false" text="Save" />
+            <Button fx:id="btnUpdate" layoutX="403.0" layoutY="18.0" mnemonicParsing="false" text="Update" />
+            <Button fx:id="btnDelete" layoutX="318.0" layoutY="18.0" mnemonicParsing="false" text="Delete" />
+            <Button fx:id="btnClear" layoutX="233.0" layoutY="18.0" mnemonicParsing="false" text="Clear" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
